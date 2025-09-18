@@ -1,7 +1,7 @@
 # 🥬 PantryPilot
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/pantrypilot)
+[![CI](https://github.com/Muadeel56/pantrypilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Muadeel56/pantrypilot/actions/workflows/ci.yml)
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D.svg)](https://vuejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg)](https://www.typescriptlang.org/)
 
@@ -19,6 +19,7 @@ PantryPilot aims to revolutionize how households manage their food inventory. Ou
 ## ✨ Features
 
 ### Current Features
+
 - 📊 **Dashboard Overview**: Real-time statistics on total items, expiring items, and low stock
 - 📝 **Item Management**: Add, edit, and remove pantry items with detailed information
 - 📅 **Expiry Tracking**: Monitor expiration dates with visual indicators
@@ -28,6 +29,7 @@ PantryPilot aims to revolutionize how households manage their food inventory. Ou
 - 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
 
 ### Planned Features
+
 - 🔔 **Smart Notifications**: Email and push notifications for expiring items
 - 🛒 **Shopping Lists**: Generate shopping lists based on low stock and meal planning
 - 📊 **Analytics**: Insights into consumption patterns and waste reduction
@@ -38,6 +40,7 @@ PantryPilot aims to revolutionize how households manage their food inventory. Ou
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Vue.js 3** - Progressive JavaScript framework with Composition API
 - **TypeScript** - Type-safe JavaScript development
 - **Vite** - Fast build tool and development server
@@ -45,16 +48,19 @@ PantryPilot aims to revolutionize how households manage their food inventory. Ou
 - **Pinia** - Intuitive state management for Vue
 
 ### Styling & UI
+
 - **Tailwind CSS 4** - Utility-first CSS framework
 - **Custom CSS Variables** - Brand-consistent color system
 - **Responsive Design** - Mobile-first approach
 
 ### Development Tools
+
 - **ESLint** - Code linting and quality assurance
 - **Prettier** - Code formatting
 - **TypeScript Compiler** - Type checking and compilation
 
 ### Build & Deployment
+
 - **Vite Build** - Optimized production builds
 - **Modern JavaScript** - ES modules and modern syntax
 
@@ -63,16 +69,19 @@ PantryPilot aims to revolutionize how households manage their food inventory. Ou
 PantryPilot uses a carefully crafted color palette inspired by fresh, natural ingredients:
 
 ### Primary Colors
+
 - **Fresh Basil** `#4a7c59` - Primary green for main actions and branding
 - **Fresh Basil Light** `#6b9b7a` - Lighter variant for hover states
 - **Fresh Basil Dark** `#3a5c47` - Darker variant for pressed states
 
 ### Accent Colors
+
 - **Lemon Zest** `#f4d03f` - Bright yellow for highlights and warnings
 - **Lemon Zest Light** `#f7d966` - Lighter variant for subtle accents
 - **Lemon Zest Dark** `#e6c23a` - Darker variant for emphasis
 
 ### Supporting Colors
+
 - **Sage** `#9caf88` - Muted green for secondary elements
 - **Cream** `#f8f6f0` - Warm background color
 - **Charcoal** `#2c3e50` - Primary text color
@@ -89,12 +98,14 @@ PantryPilot uses a carefully crafted color palette inspired by fresh, natural in
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/pantrypilot.git
    cd pantrypilot
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -102,6 +113,7 @@ PantryPilot uses a carefully crafted color palette inspired by fresh, natural in
    ```
 
 3. **Start the development server**
+
    ```bash
    npm run dev
    # or
@@ -149,6 +161,7 @@ We welcome contributions from the community! Here's how you can help:
 ### Development Workflow
 
 1. **Fork the repository** and create a feature branch
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -160,6 +173,7 @@ We welcome contributions from the community! Here's how you can help:
    - Add tests for new features
 
 3. **Test your changes**
+
    ```bash
    npm run lint:check
    npm run format:check
@@ -188,16 +202,19 @@ We welcome contributions from the community! Here's how you can help:
 > **Note**: Screenshots will be added as the application develops.
 
 ### Dashboard View
+
 ![Dashboard Screenshot](docs/screenshots/dashboard.png)
-*Main dashboard showing inventory statistics and recent activity*
+_Main dashboard showing inventory statistics and recent activity_
 
 ### Item Management
+
 ![Item Management Screenshot](docs/screenshots/item-management.png)
-*Add and edit pantry items with detailed information*
+_Add and edit pantry items with detailed information_
 
 ### Mobile View
+
 ![Mobile Screenshot](docs/screenshots/mobile.png)
-*Responsive design optimized for mobile devices*
+_Responsive design optimized for mobile devices_
 
 ## 📄 License
 
