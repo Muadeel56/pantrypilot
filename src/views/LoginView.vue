@@ -5,21 +5,21 @@
       <form @submit.prevent="handleLogin" class="login-form">
         <div class="form-group">
           <label for="email">Email</label>
-          <input 
-            type="email" 
-            id="email" 
-            v-model="email" 
-            required 
+          <input
+            type="email"
+            id="email"
+            v-model="email"
+            required
             placeholder="Enter your email"
           />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input 
-            type="password" 
-            id="password" 
-            v-model="password" 
-            required 
+          <input
+            type="password"
+            id="password"
+            v-model="password"
+            required
             placeholder="Enter your password"
           />
         </div>
@@ -33,19 +33,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-const router = useRouter()
-const email = ref('')
-const password = ref('')
+const router = useRouter();
+const email = ref('');
+const password = ref('');
 
 const handleLogin = () => {
   // Stub login logic
-  console.log('Login attempt:', { email: email.value, password: password.value })
+  console.log('Login attempt:', {
+    email: email.value,
+    password: password.value,
+  });
   // For now, just redirect to dashboard
-  router.push('/dashboard')
-}
+  router.push('/dashboard');
+};
 </script>
 
 <style scoped>

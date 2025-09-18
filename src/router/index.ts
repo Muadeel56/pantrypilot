@@ -1,46 +1,46 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import type { RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 
 // Lazy load Dashboard component
-const DashboardView = () => import('@/views/DashboardView.vue')
+const DashboardView = () => import('@/views/DashboardView.vue');
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/HomeView.vue')
+    component: () => import('@/views/HomeView.vue'),
   },
   {
     path: '/dashboard',
     name: 'Dashboard',
     component: DashboardView,
     meta: {
-      requiresAuth: true
-    }
+      requiresAuth: true,
+    },
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import('@/views/LoginView.vue')
+    component: () => import('@/views/LoginView.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    redirect: '/'
-  }
-]
+    redirect: '/',
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(_to, _from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
-      return { top: 0 }
+      return { top: 0 };
     }
-  }
-})
+  },
+});
 
 // Navigation guards
 router.beforeEach((to, _from, next) => {
@@ -54,7 +54,7 @@ router.beforeEach((to, _from, next) => {
     //   return
     // }
   }
-  next()
-})
+  next();
+});
 
-export default router
+export default router;

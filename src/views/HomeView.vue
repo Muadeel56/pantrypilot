@@ -4,7 +4,9 @@
     <p>Your smart pantry management solution</p>
     <div class="actions">
       <router-link to="/login" class="btn btn-primary">Login</router-link>
-      <router-link to="/dashboard" class="btn btn-secondary">Dashboard</router-link>
+      <router-link to="/dashboard" class="btn btn-secondary"
+        >Dashboard</router-link
+      >
     </div>
   </div>
 </template>

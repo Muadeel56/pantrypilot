@@ -7,7 +7,7 @@
         <router-link to="/login" class="nav-link">Login</router-link>
       </nav>
     </header>
-    
+
     <main class="dashboard-content">
       <div class="stats-grid">
         <div class="stat-card">
@@ -23,11 +23,15 @@
           <p class="stat-number">{{ store.lowStockItems }}</p>
         </div>
       </div>
-      
+
       <div class="recent-activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
-          <li v-for="activity in store.recentActivity" :key="activity.id" class="activity-item">
+          <li
+            v-for="activity in store.recentActivity"
+            :key="activity.id"
+            class="activity-item"
+          >
             <span class="activity-time">{{ activity.time }}</span>
             <span class="activity-description">{{ activity.description }}</span>
           </li>
@@ -38,9 +42,9 @@
 </template>
 
 <script setup lang="ts">
-import { usePantryStore } from '@/stores/pantry'
+import { usePantryStore } from '@/stores/pantry';
 
-const store = usePantryStore()
+const store = usePantryStore();
 </script>
 
 <style scoped>
