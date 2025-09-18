@@ -23,7 +23,7 @@ interface Props {
   // Define props here
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <style scoped>

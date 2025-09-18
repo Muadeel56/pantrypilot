@@ -12,25 +12,25 @@ This directory contains Pinia stores for state management.
 ## Example
 
 ```typescript
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { defineStore } from 'pinia';
+import { ref, computed } from 'vue';
 
 export const useExampleStore = defineStore('example', () => {
   // State
-  const items = ref([])
-  
+  const items = ref([]);
+
   // Getters
-  const itemCount = computed(() => items.value.length)
-  
+  const itemCount = computed(() => items.value.length);
+
   // Actions
-  const addItem = (item) => {
-    items.value.push(item)
-  }
-  
+  const addItem = item => {
+    items.value.push(item);
+  };
+
   return {
     items,
     itemCount,
-    addItem
-  }
-})
+    addItem,
+  };
+});
 ```

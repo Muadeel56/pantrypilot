@@ -15,20 +15,20 @@ The router is configured in main.ts and used throughout the application for navi
 ## Example Route Definition
 
 ```typescript
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/HomeView.vue')
-  }
-]
+    component: () => import('@/views/HomeView.vue'),
+  },
+];
 
 export default createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
 ```
 
 ## Best Practices

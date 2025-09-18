@@ -15,10 +15,10 @@ Assets in this directory are processed by Vite and can be imported in your compo
 
 ```typescript
 // Import images
-import logo from '@/assets/images/logo.png'
+import logo from '@/assets/images/logo.png';
 
 // Import data
-import config from '@/assets/data/config.json'
+import config from '@/assets/data/config.json';
 ```
 
 ## Best Practices

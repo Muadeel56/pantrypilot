@@ -14,7 +14,7 @@ This directory contains global styles and theme configurations.
 Import styles in your main.ts or App.vue:
 
 ```typescript
-import '@/styles/theme.css'
+import '@/styles/theme.css';
 ```
 
 ## Best Practices
