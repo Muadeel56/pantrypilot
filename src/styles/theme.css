@@ -1,0 +1,18 @@
+/* PantryPilot Brand Colors */
+:root {
+  /* Fresh Basil - Primary Green */
+  --color-fresh-basil: #4a7c59;
+  --color-fresh-basil-light: #6b9b7a;
+  --color-fresh-basil-dark: #3a5c47;
+  
+  /* Lemon Zest - Accent Yellow */
+  --color-lemon-zest: #f4d03f;
+  --color-lemon-zest-light: #f7d966;
+  --color-lemon-zest-dark: #e6c23a;
+  
+  /* Supporting Colors */
+  --color-sage: #9caf88;
+  --color-cream: #f8f6f0;
+  --color-charcoal: #2c3e50;
+  --color-warm-gray: #6c757d;
+}
