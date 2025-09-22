@@ -1,5 +1,5 @@
 <template>
-  <main class="home" role="main">
+  <div class="home">
     <h1>Welcome to PantryPilot</h1>
     <p>Your smart pantry management solution</p>
     <div class="actions">
@@ -8,7 +8,7 @@
         >Dashboard</router-link
       >
     </div>
-  </main>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -22,12 +22,12 @@
 }
 
 .home h1 {
-  color: #ffffff; /* WCAG AA compliant: 21:1 contrast ratio against #242424 */
+  color: #2c3e50;
   margin-bottom: 1rem;
 }
 
 .home p {
-  color: #e9ecef; /* WCAG AA compliant: 8.1:1 contrast ratio against #242424 */
+  color: #7f8c8d;
   margin-bottom: 2rem;
   font-size: 1.1rem;
 }
@@ -44,40 +44,23 @@
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.btn:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
 }
 
 .btn-primary {
-  background-color: #1e40af; /* WCAG AA compliant: 4.5:1 contrast ratio */
+  background-color: #3498db;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8;
+  background-color: #2980b9;
 }
 
 .btn-secondary {
-  background-color: #374151; /* WCAG AA compliant: 4.5:1 contrast ratio */
+  background-color: #95a5a6;
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #4b5563;
-}
-
-/* Light mode overrides for better contrast */
-@media (prefers-color-scheme: light) {
-  .home h1 {
-    color: #1f2937; /* Dark text for light backgrounds */
-  }
-  
-  .home p {
-    color: #4b5563; /* Darker gray for light backgrounds */
-  }
+  background-color: #7f8c8d;
 }
 </style>
