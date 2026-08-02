@@ -25,3 +25,8 @@ dist-ssr
 
 # Environment variables
 .env*
+.dev.vars
+
+# Cloudflare / OpenNext (Phase 3+)
+.wrangler/
+.open-next/
