@@ -4,11 +4,11 @@ Status for PantryPilot v2 rebuild ([PROJECT_REBUILD_PLAN.md](../PROJECT_REBUILD_
 
 ## Domain decision
 
-| Field | Value |
-|-------|-------|
-| Domain status | **C** — No domain planned for now |
-| Domain name | n/a |
-| Zone already on Cloudflare? | **no** |
+| Field                       | Value                             |
+| --------------------------- | --------------------------------- |
+| Domain status               | **C** — No domain planned for now |
+| Domain name                 | n/a                               |
+| Zone already on Cloudflare? | **no**                            |
 
 Use `*.workers.dev` for preview and production until a custom domain exists.
 
@@ -23,21 +23,21 @@ Email Routing and custom-domain steps cannot be fully completed under decision C
 
 ## Account products (confirmed)
 
-| Product | Status |
-|---------|--------|
-| Workers | Available (account already has Workers) |
-| D1 | Available in dashboard |
-| R2 | Product available; **subscription activation** requires a payment method on file (free tier still $0 until overages). Complete “Add R2 subscription” in the dashboard before Phase 6. |
-| Email Routing | Product available; zone setup deferred (domain decision C) |
+| Product       | Status                                                                                                                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Workers       | Available (account already has Workers)                                                                                                                                               |
+| D1            | Available in dashboard                                                                                                                                                                |
+| R2            | Product available; **subscription activation** requires a payment method on file (free tier still $0 until overages). Complete “Add R2 subscription” in the dashboard before Phase 6. |
+| Email Routing | Product available; zone setup deferred (domain decision C)                                                                                                                            |
 
 ## Secrets for Phase 10 (CI)
 
 GitHub Actions will need these repository secrets later (Phase 10). Values live in a password manager — **never commit them**.
 
-| Secret | Purpose |
-|--------|---------|
-| `CLOUDFLARE_API_TOKEN` | Deploy / manage Workers, D1, R2 |
-| `CLOUDFLARE_ACCOUNT_ID` | Target Cloudflare account |
+| Secret                  | Purpose                         |
+| ----------------------- | ------------------------------- |
+| `CLOUDFLARE_API_TOKEN`  | Deploy / manage Workers, D1, R2 |
+| `CLOUDFLARE_ACCOUNT_ID` | Target Cloudflare account       |
 
 API token permissions created in Phase 2 (no Email Routing zone perms yet):
 
