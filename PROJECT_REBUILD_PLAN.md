@@ -51,7 +51,7 @@ Repo strategy: same GitHub repo, old code wiped and replaced.
 3. Decide on domain: do you have (or plan to add) a domain in Cloudflare DNS? Required for:
    - Email Routing (needs a verified zone).
    - Production Worker custom domain.
-   If not yet, note "buy/point domain to Cloudflare" as a blocking prerequisite for Phases 6 and 9's custom-domain step (workers.dev subdomain works without one for everything except email).
+     If not yet, note "buy/point domain to Cloudflare" as a blocking prerequisite for Phases 6 and 9's custom-domain step (workers.dev subdomain works without one for everything except email).
 4. Create a Cloudflare API token (Workers Scripts:Edit, D1:Edit, R2:Edit, Email Routing:Edit) and store it — you'll need it for GitHub Actions secrets later (Phase 10), not committed to the repo.
 
 **Exit criteria:** `wrangler whoami` succeeds; you know whether a custom domain is available.
@@ -143,11 +143,13 @@ Repo strategy: same GitHub repo, old code wiped and replaced.
 
 ## Phase 7 — Email: Cloudflare Email Routing
 
-**Important caveat to plan around:** Cloudflare Email Routing is primarily built for *receiving/forwarding* mail on a zone, plus a `send_email` Worker binding that can only send to destination addresses you've explicitly verified in the dashboard — it is **not** a general transactional-email API for sending to arbitrary end-user addresses (no arbitrary recipient sending, no built-in deliverability/reputation tooling like a normal ESP). Confirm this fits your needs:
+**Important caveat to plan around:** Cloudflare Email Routing is primarily built for _receiving/forwarding_ mail on a zone, plus a `send_email` Worker binding that can only send to destination addresses you've explicitly verified in the dashboard — it is **not** a general transactional-email API for sending to arbitrary end-user addresses (no arbitrary recipient sending, no built-in deliverability/reputation tooling like a normal ESP). Confirm this fits your needs:
+
 - Fine for: internal notifications, contact-form-to-owner forwarding, alerting to your own verified inbox.
 - Not fine for: password reset / magic-link emails to arbitrary signups, marketing mail, transactional receipts to customers.
 
 Steps:
+
 1. Add your domain as a Cloudflare zone (if not already) — required for Email Routing.
 2. Enable Email Routing in the dashboard, verify destination address(es).
 3. Add the `send_email` binding to `wrangler.jsonc` for outbound sends from a Worker/Route Handler.
@@ -219,9 +221,9 @@ Since scope is being defined fresh rather than ported from the old app:
 
 ## Decisions Still Needed From You (blocking specific phases)
 
-| Phase | Decision | Options |
-|---|---|---|
-| 5 | Auth provider(s) | OAuth (Google/GitHub) vs credentials vs magic link — affects whether Phase 7's email limitation blocks auth |
-| 2 | Custom domain availability | Determines whether Email Routing (needs a zone) and custom Worker domain are possible now or deferred |
-| 7 | Email-for-auth workaround | If magic-link/password-reset to arbitrary users is needed, pick a companion transactional provider or drop that requirement |
-| 8 | v1 feature scope | Concrete list of entities/screens for PantryPilot v2 |
+| Phase | Decision                   | Options                                                                                                                     |
+| ----- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 5     | Auth provider(s)           | OAuth (Google/GitHub) vs credentials vs magic link — affects whether Phase 7's email limitation blocks auth                 |
+| 2     | Custom domain availability | Determines whether Email Routing (needs a zone) and custom Worker domain are possible now or deferred                       |
+| 7     | Email-for-auth workaround  | If magic-link/password-reset to arbitrary users is needed, pick a companion transactional provider or drop that requirement |
+| 8     | v1 feature scope           | Concrete list of entities/screens for PantryPilot v2                                                                        |
